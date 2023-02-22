@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>parent</artifactId>
+    <groupId>cn.labzen</groupId>
+    <version>11.7</version>
+    <relativePath/>
+  </parent>
+
+  <artifactId>hikvision-jna</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>Labzen.Hikvision.JNA</name>
+  <description>海康威视 - SDK所有DLL接口的JNA映射类封装 (based version 6.1.9.xx)</description>
+  <url>https://github.com/labzen/hikvision</url>
+
+  <licenses>
+    <license>
+      <name>Apache License 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
+  <organization>
+    <name>Labzen</name>
+    <url>https://labzen.cn</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <name>Dean Zhao</name>
+      <email>rcarlosdasilva@163.com</email>
+      <timezone>+8</timezone>
+    </developer>
+  </developers>
+
+  <scm>
+    <url>https://github.com/labzen/plugin</url>
+    <connection>scm:git@github.com:labzen/plugin.git</connection>
+    <developerConnection>scm:git@github.com:labzen/plugin.git</developerConnection>
+    <tag>V${project.version}</tag>
+  </scm>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>net.java.dev.jna</groupId>
+      <artifactId>jna-platform</artifactId>
+    </dependency>
+  </dependencies>
+
+</project>

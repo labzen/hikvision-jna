@@ -1,0 +1,77 @@
+# EditorConfig is awesome: https://EditorConfig.org
+root = true
+
+# IntelliJ IDEA 增强属性 Since 2019.2
+[*]
+charset                     = utf-8
+end_of_line                 = crlf
+indent_style                = space
+indent_size                 = 2
+tab_width                   = 2
+ij_continuation_indent_size = 4
+max_line_length             = 120
+trim_trailing_whitespace    = true
+insert_final_newline        = true
+
+# formatter tags is not working
+ij_formatter_tags_enabled   = true
+ij_formatter_off_tag        = @formatter:off
+ij_formatter_on_tag         = @formatter:on
+ij_wrap_on_typing           = true
+ij_visual_guides            = 70, 100, 120
+
+[.editorconfig]
+ij_editorconfig_align_group_field_declarations = true
+
+[*.java]
+ij_java_annotation_parameter_wrap                               = on_every_item
+ij_java_array_initializer_wrap                                  = split_into_lines
+ij_java_binary_operation_wrap                                   = on_every_item
+ij_java_call_parameters_wrap                                    = on_every_item
+ij_java_enum_constants_wrap                                     = split_into_lines
+ij_java_extends_list_wrap                                       = on_every_item
+ij_java_method_call_chain_wrap                                  = on_every_item
+ij_java_method_parameters_wrap                                  = on_every_item
+ij_java_throws_list_wrap                                        = on_every_item
+ij_java_variable_annotation_wrap                                = split_into_lines
+ij_any_resource_list_wrap                                       = split_into_lines
+
+# -- separator == separator -- separator == separator -- separator == separator --
+
+ij_java_align_multiline_annotation_parameters                   = true
+ij_java_align_multiline_array_initializer_expression            = true
+ij_java_align_multiline_binary_operation                        = true
+ij_java_align_multiline_extends_list                            = true
+ij_java_align_multiline_chained_methods                         = true
+
+# -- separator == separator -- separator == separator -- separator == separator --
+
+ij_java_doc_keep_empty_parameter_tag                            = false
+ij_java_doc_keep_empty_return_tag                               = false
+ij_java_doc_keep_empty_throws_tag                               = false
+ij_java_doc_keep_invalid_tags                                   = false
+
+# -- separator == separator -- separator == separator -- separator == separator --
+
+ij_java_keep_blank_lines_before_right_brace                     = 1
+ij_java_keep_blank_lines_between_package_declaration_and_header = 0
+ij_java_keep_blank_lines_in_code                                = 1
+ij_java_keep_blank_lines_in_declarations                        = 1
+ij_java_keep_control_statement_in_one_line                      = false
+ij_java_keep_first_column_comment                               = false
+ij_java_keep_line_breaks                                        = false
+
+# -- separator == separator -- separator == separator -- separator == separator --
+
+ij_java_do_while_brace_force                                    = always
+ij_java_for_brace_force                                         = always
+ij_java_if_brace_force                                          = always
+ij_java_while_brace_force                                       = always
+ij_java_blank_lines_after_class_header                          = 1
+ij_java_blank_lines_around_class                                = 1
+ij_java_line_comment_at_first_column                            = false
+
+[*.kt]
+ij_kotlin_spaces_around_equality_operators = true
+ij_kotlin_line_comment_at_first_column     = false
+ij_kotlin_line_comment_add_space           = true
