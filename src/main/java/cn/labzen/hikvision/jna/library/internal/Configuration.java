@@ -7,7 +7,7 @@ import com.sun.jna.Pointer;
 import com.sun.jna.ptr.IntByReference;
 
 /**
- * 4 - 参数配置
+ * 8 - 参数配置
  * <ul>
  *   <li>
  *     <b>通用系统参数配置</b>
@@ -28,7 +28,7 @@ import com.sun.jna.ptr.IntByReference;
 public interface Configuration {
 
   /**
-   * 4.x - [通用系统参数配置]： 获取设备的配置信息
+   * 8.x - [通用系统参数配置]： 获取设备的配置信息
    * <p/>
    * <font style="color: yellow; font-weight:bold">
    * 本接口在不同设备下、不同功能下通用，具体参数取值请参考海康开发手册，情况太多，命令枚举可能会有不全
@@ -71,7 +71,7 @@ public interface Configuration {
                                IntByReference lpBytesReturned);
 
   /**
-   * 4.x - [通用系统参数配置]： 设置设备的配置信息
+   * 8.x - [通用系统参数配置]： 设置设备的配置信息
    * <p/>
    * <font style="color: yellow; font-weight:bold">
    * 本接口在不同设备下、不同功能下通用，具体参数取值请参考海康开发手册，情况太多，命令枚举可能会有不全
@@ -96,7 +96,7 @@ public interface Configuration {
   boolean NET_DVR_SetDVRConfig(int lUserID, int dwCommand, int lChannel, Pointer lpInBuffer, int dwInBufferSize);
 
   /**
-   * 4.x - [通用系统参数配置]： 获取设备的配置信息
+   * 8.x - [通用系统参数配置]： 获取设备的配置信息
    * <p/>
    * <font style="color: yellow; font-weight:bold">
    * 本接口在不同设备下、不同功能下通用，具体参数取值请参考海康开发手册，情况太多，命令枚举可能会有不全
@@ -113,7 +113,7 @@ public interface Configuration {
   boolean NET_DVR_GetSTDConfig(int lUserID, int dwCommand, Pointer lpConfigParam);
 
   /**
-   * 4.x - [通用系统参数配置]： 设置设备的配置信息
+   * 8.x - [通用系统参数配置]： 设置设备的配置信息
    * <p/>
    * <font style="color: yellow; font-weight:bold">
    * 本接口在不同设备下、不同功能下通用，具体参数取值请参考海康开发手册，情况太多，命令枚举可能会有不全
@@ -130,7 +130,7 @@ public interface Configuration {
   boolean NET_DVR_SetSTDConfig(int lUserID, int dwCommand, Pointer lpConfigParam);
 
   /**
-   * 4.x - [通用系统参数配置]： 远程控制
+   * 8.x - [通用系统参数配置]： 远程控制
    *
    * @param lUserID        [in] NET_DVR_Login_V40等登录接口的返回值
    * @param dwCommand      [in] 控制命令，参考{@link RemoteControlCommand}
@@ -141,7 +141,7 @@ public interface Configuration {
   boolean NET_DVR_RemoteControl(NativeLong lUserID, int dwCommand, Pointer lpInBuffer, int dwInBufferSize);
 
   /**
-   * 4.x - [通用系统参数配置]： 启动远程配置
+   * 8.x - [通用系统参数配置]： 启动远程配置
    * <p/>
    * 调用该接口启动长连接远程配置后，还需要调用其他接口获取或者设置相关参数，参考{@link RemoteConfigCommand}，详细查看海康官方文档
    *
@@ -163,7 +163,7 @@ public interface Configuration {
                                        Pointer pUserData);
 
   /**
-   * 4.x - [通用系统参数配置]： 逐个获取查找到的信息
+   * 8.x - [通用系统参数配置]： 逐个获取查找到的信息
    * <p/>
    * 在调用该接口获取查找文件之前，必须先调用{@link #NET_DVR_StartRemoteConfig(NativeLong, int, Pointer, int, FRemoteConfigCallback, Pointer)}
    * 得到当前的查找句柄。此接口用于获取一条已查找到的信息，若要获取全部的已查找到的信息，需要循环调用此接口
@@ -184,14 +184,14 @@ public interface Configuration {
   NativeLong NET_DVR_GetNextRemoteConfig(NativeLong lHandle, Pointer lpOutBuff, int dwOutBuffSize);
 
   /**
-   * 4.x - [通用系统参数配置]： 关闭长连接配置接口所创建的句柄，释放资源
+   * 8.x - [通用系统参数配置]： 关闭长连接配置接口所创建的句柄，释放资源
    *
    * @param lHandle [in] 句柄，NET_DVR_StartRemoteConfig的返回值
    * @return TRUE表示成功，FALSE表示失败。接口返回失败请调用NET_DVR_GetLastError获取错误码，通过错误码判断出错原因
    */
   boolean NET_DVR_StopRemoteConfig(NativeLong lHandle);
 
-  // 4.x ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ 通用系统参数配置 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+  // 8.x ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ 通用系统参数配置 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
   // NET_DVR_STDControl 接口暂不实现!!!!!!!!
-  // 4.x ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ 通用系统参数配置 ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+  // 8.x ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ 通用系统参数配置 ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 }

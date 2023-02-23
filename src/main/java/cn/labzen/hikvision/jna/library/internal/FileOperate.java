@@ -1,8 +1,8 @@
 package cn.labzen.hikvision.jna.library.internal;
 
 /**
- * 5 - 云台控制
+ * 20 - 文件上传下载
  */
-public interface PtzControl {
+public interface FileOperate {
 
 }

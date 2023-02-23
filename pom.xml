@@ -39,9 +39,9 @@
   </developers>
 
   <scm>
-    <url>https://github.com/labzen/plugin</url>
-    <connection>scm:git@github.com:labzen/plugin.git</connection>
-    <developerConnection>scm:git@github.com:labzen/plugin.git</developerConnection>
+    <url>https://github.com/labzen/hikvision-jna</url>
+    <connection>scm:git@github.com:labzen/hikvision-jna.git</connection>
+    <developerConnection>scm:git@github.com:labzen/hikvision-jna.git</developerConnection>
     <tag>V${project.version}</tag>
   </scm>
 

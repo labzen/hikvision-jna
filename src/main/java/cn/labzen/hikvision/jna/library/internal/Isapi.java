@@ -4,11 +4,12 @@ import cn.labzen.hikvision.jna.struct.NET_DVR_XML_CONFIG_INPUT;
 import cn.labzen.hikvision.jna.struct.NET_DVR_XML_CONFIG_OUTPUT;
 
 /**
- * 16 - ISAPI相关功能接口
+ * xx - ISAPI相关功能接口
  * <ul>
  *   <li>{@link #NET_DVR_STDXMLConfig(int, NET_DVR_XML_CONFIG_INPUT, NET_DVR_XML_CONFIG_OUTPUT)}</li>
  * </ul>
  */
+@Deprecated
 public interface Isapi {
 
   /**

@@ -4,7 +4,7 @@ import cn.labzen.hikvision.jna.callback.MSGCallBack;
 import com.sun.jna.Pointer;
 
 /**
- * 9 - 报警布防/监听
+ * 10 - 报警布防/监听
  * <ul>
  *   <li>
  *     <b>报警布撤防</b>

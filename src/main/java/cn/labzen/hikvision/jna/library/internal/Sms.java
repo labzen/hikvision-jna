@@ -1,8 +1,8 @@
 package cn.labzen.hikvision.jna.library.internal;
 
 /**
- * 5 - 云台控制
+ * 21 - 短信功能
  */
-public interface PtzControl {
+public interface Sms {
 
 }

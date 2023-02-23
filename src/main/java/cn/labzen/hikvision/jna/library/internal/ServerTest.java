@@ -1,8 +1,8 @@
 package cn.labzen.hikvision.jna.library.internal;
 
 /**
- * 5 - 云台控制
+ * 19 - 服务器测试
  */
-public interface PtzControl {
+public interface ServerTest {
 
 }
